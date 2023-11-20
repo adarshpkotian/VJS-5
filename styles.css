@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Space Mono', monospace;
+   font-weight: 700;
+}
+
+html {
+    max-width: 100%;
+    background-color: hsl(185, 41%, 84%)
+}
+
+body {
+   max-width: 100%;
+}
+
+.outer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 75vh;
+
+}
+
+.inner-container {
+    display: flex;
+    padding: 2.55rem;
+    gap: 2.5rem;
+}
+.bottom-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.warning {
+    color: red;
+}
+
+
+
+h2 {
+  color: hsl(183, 100%, 15%);
+}
+
+.white-bg {
+    background-color: white;
+    height: 27.5rem;
+}
+
+.inner-bg {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.outputs {
+    display: flex;
+    flex-direction: row;
+}
+
+.rounded-container {
+    border-radius: 0.75rem;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+}
+
+.keys {
+    font-size: 0.75rem;
+}
+
+.values {
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.keys, .values {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.button {
+    height: 2.5rem;
+    width: 6rem;
+    border: 0;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #9fe8df;
+    color: #064e4d;
+}
+
+
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.custom {
+    color: hsl(183, 100%, 15%);
+    background-color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: hsl(189, 41%, 97%);
+    height: 2.5rem;
+    width: 6rem;
+    border: 0;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+}
+
+.custom:hover {
+    cursor: pointer;
+    background-color: #9fe8df;
+}
+
+.custom:focus {
+    cursor: text;
+    background-color: hsl(189, 41%, 97%);
+}
+
+.custom::placeholder {
+    text-align: center;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.25rem;
+}
+
+.custom:focus::placeholder {
+    color: transparent;
+} 
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-style {
+    height: 2.5rem;
+    width: 100%;
+    background-color:hsl(189, 41%, 97%);
+    border-radius: 0.25rem;
+    border:0;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 1rem;
+}
+.bill-warning {
+    margin-left: 10rem;
+}
+.input-style::placeholder {
+    text-align: right;
+    color: hsl(185, 41%, 84%);
+}
+
+.bill ,  .people {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bill img , .people img{
+    position: absolute;
+    left: 1rem;
+}
+
+.keys span {
+    font-size: 0.75rem;
+    color: hsl(184, 14%, 56%);
+}
+
+.holder {
+     position: relative;
+     display: flex;
+     align-items: center;
+}
+
+.reset-button {
+    height: 2.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: #0d686d;
+    font-size: 1rem;
+    color: #035a61;
+}
+
+.reset-active {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(180, 21%, 76%);
+    cursor: pointer;
+}
+
+.reset-active:hover {
+    background-color: hsl(189, 41%, 97%);
+
+}
+
+.active-button {
+    cursor: pointer;
+    background-color: #9fe8df;
+    color: #064e4d;
+}
+
+.hidden {
+    display: none;
+    color:red;
+}
+
+.warning-border{
+    border: red;
+}
+
+@media only screen and (max-width: 800px) {
+    .outer-container{
+        height: 100%;
+        width: 100%;
+        align-items:unset;
+    }
+    .inner-container {
+     flex-direction: column;
+     height: 55rem;
+     align-items: center;
+    }
+    h2 {
+        text-align: center;
+        padding: 5rem;
+    }
+    .buttons{
+        grid-template-columns: 1fr 1fr;
+    }
+    .inner-container {
+        border-radius: 0.75rem 0.75rem 0 0;
+    }
+    .inputs {
+        gap: 2.5rem;
+    }
+    .inner-bg {
+        height: 20rem;
+        width: 100%;
+        padding: 2.5rem;
+    }
+}
